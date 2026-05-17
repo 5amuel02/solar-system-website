@@ -410,6 +410,280 @@
       background: rgba(250, 204, 21, 0.8);
       border-radius: 999px;
     }
+
+    @media (max-width: 768px) {
+      body {
+        touch-action: none;
+      }
+
+      .info-box {
+        top: 10px;
+        left: 10px;
+        width: calc(100vw - 20px);
+        max-height: 168px;
+        padding: 12px;
+        overflow: hidden;
+      }
+
+      .info-box h1 {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+
+      .info-box p {
+        font-size: 12px;
+        line-height: 1.35;
+      }
+
+      .planet-detail {
+        margin-top: 8px;
+        padding: 8px;
+      }
+
+      .planet-detail h2 {
+        font-size: 15px;
+        margin-bottom: 4px;
+      }
+
+      .planet-detail p {
+        font-size: 11px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .credit-badge {
+        top: 184px;
+        left: 10px;
+        padding: 7px 10px;
+        font-size: 11px;
+      }
+
+      .status {
+        top: auto;
+        right: 10px;
+        bottom: 86px;
+        max-width: calc(100vw - 20px);
+        font-size: 11px;
+        padding: 8px 10px;
+      }
+
+      .feature-panel {
+        top: auto;
+        right: 10px;
+        left: 10px;
+        bottom: 138px;
+        width: auto;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 10px;
+        align-items: end;
+      }
+
+      .feature-panel label {
+        font-size: 11px;
+        margin-bottom: 4px;
+      }
+
+      .feature-panel select,
+      .feature-panel input {
+        margin-bottom: 0;
+      }
+
+      .feature-panel select {
+        padding: 8px;
+        font-size: 12px;
+      }
+
+      .value-text {
+        margin: 0;
+        font-size: 11px;
+      }
+
+      .mini-buttons {
+        grid-column: 1 / -1;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .mini-buttons button {
+        padding: 8px;
+        font-size: 11px;
+      }
+
+      .control-box {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: none;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 8px;
+        padding: 10px;
+        background: linear-gradient(to top, rgba(2, 6, 23, 0.92), rgba(2, 6, 23, 0.35));
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .control-box::-webkit-scrollbar {
+        display: none;
+      }
+
+      button {
+        flex: 0 0 auto;
+        padding: 9px 11px;
+        font-size: 11px;
+        border-radius: 9px;
+        white-space: nowrap;
+      }
+
+      button:hover {
+        transform: none;
+      }
+
+      .hint {
+        display: none;
+      }
+
+      .voyager-controls,
+      .landing-controls {
+        top: auto;
+        right: 10px;
+        left: 10px;
+        bottom: 10px;
+        justify-content: center;
+      }
+
+      .cockpit-top,
+      .landing-panel {
+        top: 10px;
+        width: calc(100vw - 20px);
+        padding: 12px;
+      }
+
+      .cockpit-title,
+      .landing-title {
+        align-items: flex-start;
+        gap: 6px;
+      }
+
+      .cockpit-title h2,
+      .landing-title h2 {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+      }
+
+      .cockpit-title span,
+      .landing-title span {
+        font-size: 11px;
+        text-align: right;
+      }
+
+      .mission-text,
+      .landing-text {
+        font-size: 12px;
+        min-height: auto;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .progress-track {
+        height: 6px;
+        margin-top: 9px;
+      }
+
+      .cockpit-bottom,
+      .landing-bottom {
+        bottom: 64px;
+        width: calc(100vw - 20px);
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .cockpit-window,
+      .helmet-ring {
+        display: none;
+      }
+
+      .hud-card {
+        padding: 10px;
+        border-radius: 14px;
+      }
+
+      .hud-card strong {
+        font-size: 12px;
+        margin-bottom: 4px;
+      }
+
+      .hud-card p {
+        font-size: 11px;
+        line-height: 1.35;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .info-box {
+        max-height: 150px;
+      }
+
+      .credit-badge {
+        display: none;
+      }
+
+      .feature-panel {
+        bottom: 128px;
+        grid-template-columns: 1fr;
+      }
+
+      .mini-buttons {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .status {
+        bottom: 78px;
+      }
+
+      .cockpit-bottom,
+      .landing-bottom {
+        grid-template-columns: 1fr;
+      }
+
+      .hud-card:nth-child(3) {
+        display: none;
+      }
+    }
+
+    @media (orientation: landscape) and (max-height: 520px) {
+      .info-box {
+        width: 280px;
+        max-height: 120px;
+      }
+
+      .info-box p,
+      .planet-detail p,
+      .credit-badge,
+      .hint {
+        display: none;
+      }
+
+      .planet-detail {
+        margin-top: 6px;
+      }
+
+      .feature-panel {
+        top: 10px;
+        right: 10px;
+        bottom: auto;
+        left: auto;
+        width: 240px;
+      }
+
+      .control-box {
+        bottom: 0;
+      }
+    }
   </style>
 
   <script type="importmap">
@@ -433,7 +707,7 @@
   </div>
 
   <div class="credit-badge">
-    <strong>SAM(LEG)</strong>
+    <strong>"Samuel(LEG)</strong>
   </div>
 
   <div class="status" id="appStatus">Loading Solar System...</div>
@@ -603,12 +877,14 @@
     const scene = new THREE.Scene();
     scene.fog = new THREE.FogExp2(0x020617, 0.0014);
 
-    const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 3000);
-    camera.position.set(0, 58, 140);
+    const isMobileScreen = window.matchMedia("(max-width: 768px)").matches;
+
+    const camera = new THREE.PerspectiveCamera(isMobileScreen ? 72 : 60, window.innerWidth / window.innerHeight, 0.1, 3000);
+    camera.position.set(0, isMobileScreen ? 72 : 58, isMobileScreen ? 190 : 140);
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobileScreen ? 1.5 : 2));
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -619,7 +895,7 @@
     controls.enableDamping = true;
     controls.dampingFactor = 0.05;
     controls.minDistance = 3;
-    controls.maxDistance = 420;
+    controls.maxDistance = isMobileScreen ? 520 : 420;
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.75);
     scene.add(ambientLight);
@@ -1673,7 +1949,7 @@
         applyLandingView();
         return;
       }
-      camera.position.set(0, 58, 140);
+      camera.position.set(0, isMobileScreen ? 72 : 58, isMobileScreen ? 190 : 140);
       controls.target.set(0, 0, 0);
       followTarget = null;
       planetFocus.value = "";
@@ -1716,6 +1992,8 @@
       console.assert(soundBtn instanceof HTMLButtonElement, "Test 30 failed: sound button must exist");
       console.assert(typeof playTestTone === "function", "Test 31 failed: playTestTone must exist");
       console.assert(typeof createNoiseLayers === "function", "Test 32 failed: createNoiseLayers must exist");
+      console.assert(typeof isMobileScreen === "boolean", "Test 33 failed: mobile screen flag must exist");
+      console.assert(window.getComputedStyle(document.querySelector(".control-box")).position === "absolute", "Test 34 failed: control box must stay overlayed");
       console.groupEnd();
     }
 
